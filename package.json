@@ -1,0 +1,33 @@
+{
+  "name": "introduccion-base-datos",
+  "version": "1.0.0",
+  "description": "Introducción  a las bases de datos de r/argentina programa",
+  "scripts": {
+    "concurrency": "node ./concurrency/filesystem/concurrency.js",
+    "concurrency:test": "run-p concurrency concurrency concurrency concurrency concurrency concurrency concurrency concurrency concurrency",
+    "concurrency:db": "node ./concurrency/sqlite/concurrency.db.js",
+    "concurrency:db:test": "run-p concurrency:db concurrency:db concurrency:db concurrency:db"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-argentina-programa/introduccion-base-datos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r-argentina-programa/introduccion-base-datos/issues"
+  },
+  "homepage": "https://github.com/r-argentina-programa/introduccion-base-datos#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.1.0"
+  }
+}

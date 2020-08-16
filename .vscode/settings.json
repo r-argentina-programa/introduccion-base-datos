@@ -1,0 +1,10 @@
+{
+  "sqltools.connections": [
+    {
+      "database": "${workspaceFolder:introduccion-base-datos}/sample.db",
+      "driver": "SQLite",
+      "name": "ejemplo",
+      "previewLimit": 50
+    }
+  ]
+}

@@ -19,7 +19,7 @@ Para eliminar una culumna
 en mysql haríamos
 ALTER TABLE liga_italiana DROP created_at_2; 
 sqlite no permite hacer esto
-create una tabla nueva
+crear una tabla nueva
 la alternativa es mover los datos a la nueva tabla
 borrar la tabla actual
 renombrar la tabla nueva a liga_italiana

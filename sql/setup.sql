@@ -1,3 +1,4 @@
+PRAGMA foreign_keys = OFF;
 DROP TABLE IF EXISTS liga_italiana;
 CREATE TABLE IF NOT EXISTS liga_italiana(
   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -52,6 +53,8 @@ CREATE TABLE IF NOT EXISTS jugadores(
   updated_at DATE DEFAULT (datetime('now')) NOT NULL,
   FOREIGN KEY(fk_equipo) REFERENCES liga_italiana(id)
 );
+
+PRAGMA foreign_keys = ON;
 
 /* FUENTE https://github.com/openfootball/italy/tree/master/2019-20 */
 /* Procesamiento de datos en: https://docs.google.com/spreadsheets/d/17ZGDEkUyaHa-WH7Xagcr42a5kq5oiAchQtPf-XOcIAI/edit?usp=drive_web&ouid=109791343978390431897 */
@@ -152,3 +155,4 @@ INSERT INTO jugadores (fk_equipo, nombre) VALUES
 ((SELECT id FROM liga_italiana ORDER BY RANDOM() LIMIT 1), 'pepe'),
 ((SELECT id FROM liga_italiana ORDER BY RANDOM() LIMIT 1), 'juan'),
 (NULL, 'cacho');
+

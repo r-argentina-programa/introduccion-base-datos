@@ -2,9 +2,7 @@ const path = require("path");
 const sqlite = require("better-sqlite3");
 
 const db = sqlite(path.resolve(__dirname, "./concurrency.db"), {
-  verbose: () => {
-    return console.log;
-  },
+  verbose: console.log,
 });
 
 db.exec("CREATE TABLE IF NOT EXISTS test(text VARCHAR(255))");

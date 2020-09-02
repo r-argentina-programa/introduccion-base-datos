@@ -6,7 +6,10 @@
     "concurrency": "node ./concurrency/filesystem/concurrency.js",
     "concurrency:test": "run-p concurrency concurrency concurrency concurrency",
     "concurrency:db": "node ./concurrency/sqlite/concurrency.db.js",
-    "concurrency:db:test": "run-p concurrency:db concurrency:db concurrency:db concurrency:db"
+    "concurrency:db:test": "run-p concurrency:db concurrency:db concurrency:db concurrency:db",
+    "orm": "node ./orm/orm.js",
+    "orm:generar-modelos": "sequelize-auto -h localhost -d './sample.db' --dialect sqlite -o './orm/modelos'",
+    "orm:liga": "node ./orm/ormLiga.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +28,14 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "sequelize-auto": "^0.5.4",
+    "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
-    "better-sqlite3": "^7.1.0"
+    "better-sqlite3": "^7.1.0",
+    "chalk": "^4.1.0",
+    "sequelize": "^6.3.4",
+    "sqlite3": "^5.0.0"
   }
 }

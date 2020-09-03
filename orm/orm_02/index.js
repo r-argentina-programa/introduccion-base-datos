@@ -13,7 +13,7 @@ const dividir = () => {
 // crea la instancia de la conexión a la base de datos
 const sequelize = new Sequelize({
   dialect: "sqlite",
-  storage: "./orm/data/orm_ejemplo_liga_italiana.db",
+  storage: "./orm/orm_02/data/orm_ejemplo_liga_italiana.db",
   logging: console.log,
   sync: false,
 });

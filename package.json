@@ -7,10 +7,11 @@
     "concurrency:test": "run-p concurrency concurrency concurrency concurrency",
     "concurrency:db": "node ./concurrency/sqlite/concurrency.db.js",
     "concurrency:db:test": "run-p concurrency:db concurrency:db concurrency:db concurrency:db",
-    "orm": "node ./orm/orm.js",
-    "orm:migraciones": "sequelize-cli db:migrate --config=./orm/config.js --migrations-path=./orm/migrations --env=development",
-    "orm:generar-modelos": "sequelize-auto -h localhost -d './sample.db' --dialect sqlite -o './orm/modelos'",
-    "orm:liga": "node ./orm/ormLiga.js"
+    "orm:01": "node ./orm/orm_01/index.js",
+    "orm:02": "node ./orm/orm_02/index.js",
+    "orm:02:generar-modelos": "sequelize-auto -h localhost -d './sample.db' --dialect sqlite -o './orm/modelos'",
+    "orm:02:migraciones": "sequelize-cli db:migrate --config=./orm/orm_02/config.js --migrations-path=./orm/migrations --env=development",
+    "orm:03": "node ./orm/orm_03/index.js"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     dialect: "sqlite",
-    storage: "./orm/data/orm_ejemplo_liga_italiana.db", // por default corre con :memory: por lo tanto siempre corre las migraciones otra vez
+    storage: "./orm/orm_02/data/orm_ejemplo_liga_italiana.db", // por default corre con :memory: por lo tanto siempre corre las migraciones otra vez
   },
   production: {
     database: process.env.DB_HOST,

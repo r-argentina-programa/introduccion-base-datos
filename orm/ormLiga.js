@@ -156,4 +156,6 @@ function insertarJugador(nombre, equipoId) {
     ).toJSON()
   );
   dividir();
+
+  sequelize.query("SELECT * FROM Person");
 })();

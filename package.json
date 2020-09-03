@@ -8,6 +8,7 @@
     "concurrency:db": "node ./concurrency/sqlite/concurrency.db.js",
     "concurrency:db:test": "run-p concurrency:db concurrency:db concurrency:db concurrency:db",
     "orm": "node ./orm/orm.js",
+    "orm:migraciones": "sequelize-cli db:migrate --config=./orm/config.js --migrations-path=./orm/migrations --env=development",
     "orm:generar-modelos": "sequelize-auto -h localhost -d './sample.db' --dialect sqlite -o './orm/modelos'",
     "orm:liga": "node ./orm/ormLiga.js"
   },

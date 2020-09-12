@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes, Op } = require("sequelize");
+const { Sequelize, DataTypes } = require("sequelize");
 const Libro = require("./models/libro");
 const Categoria = require("./models/categoria");
 const CategoriaLibro = require("./models/categoriaLibro");
